@@ -9,6 +9,8 @@ import AddCar from "./feature/addCar/pages/addCar.jsx";
 import Transactions from "./feature/transactions/pages/transactions.jsx";
 import UserInformation from "./feature/usersInformation/pages/userInformation.jsx";
 import Login from "./feature/auth/pages/login.jsx";
+import { Provider } from "react-redux";
+import store from "./redux/store.js";
 
 const router = createBrowserRouter([
   { path: "/dashboard", element: <Dashboard /> },
@@ -20,6 +22,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>
 );
