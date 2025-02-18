@@ -129,7 +129,7 @@ const Buttons = () => {
           </button>
         </div>
       </Link>
-      <Link to="user">
+      <Link to="/user">
         <div className="flex flex-row gap-[10px] align-center">
           <svg
             viewBox="0 0 24 24"

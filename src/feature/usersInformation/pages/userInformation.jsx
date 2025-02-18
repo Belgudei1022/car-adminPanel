@@ -4,7 +4,7 @@ import Layout from "../../../shared/pages/layout";
 const UserInformation = () => {
   return (
     <Layout>
-      <div></div>
+      <div>5789 789 789</div>
     </Layout>
   );
 };

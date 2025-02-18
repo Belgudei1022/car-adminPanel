@@ -2,7 +2,7 @@ import React from "react";
 
 const RentRow = ({ data }) => {
   return (
-    <div className="flex flex-row h-[30px] justify-between">
+    <div className="flex flex-row h-[30px]  justify-between">
       <p className="font-medium w-[60px] h-[30px] text-center flex align-center justify-center">
         {data.rentalId}
       </p>

@@ -22,10 +22,10 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <div className="w-full h-screen p-[20px] px-[40px]">
+      <div className="w-full h-screen p-[20px] px-[40px] ">
         <div className="w-full px-[10px] flex flex-col gap-[20px]">
           <div className="title">
-            <p className="text-black text-[26px] mt-[5px] font-medium">
+            <p className="text-black text-[26px] mt-[5px]  font-medium">
               Өнөөдрийн статистик
             </p>
             <p className="text-black text-[20px] mt-[5px] font-medium">

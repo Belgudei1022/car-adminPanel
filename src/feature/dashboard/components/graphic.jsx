@@ -2,7 +2,7 @@ import React from "react";
 
 
 const Graphic = () => {
-  return <div className="w-1/2 h-[400px] bg-white rounded-2xl "></div>;
+  return <div className="w-1/2 h-[400px] bg-[#D9D9D9] rounded-2xl "></div>;
 };
 
 export default Graphic;
