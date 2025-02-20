@@ -5,17 +5,16 @@ import App from "./App.jsx";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import Dashboard from "./feature/dashboard/pages/dashboard.jsx";
-import AddCar from "./feature/addCar/pages/addCar.jsx";
-import Transactions from "./feature/transactions/pages/transactions.jsx";
-import UserInformation from "./feature/usersInformation/pages/userInformation.jsx";
+import UserInformation from "./feature/users/pages/userInformation.jsx";
 import Login from "./feature/auth/pages/login.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
+import Cars from "./feature/addCar/pages/cars.jsx";
 
 const router = createBrowserRouter([
   { path: "/dashboard", element: <Dashboard /> },
-  { path: "/cars", element: <AddCar /> },
-  { path: "/order", element: <Transactions /> },
+  { path: "/cars", element: <Cars /> },
+
   { path: "/user", element: <UserInformation /> },
   { path: "/", element: <Login /> },
 ]);

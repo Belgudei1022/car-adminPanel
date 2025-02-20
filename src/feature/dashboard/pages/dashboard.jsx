@@ -14,18 +14,22 @@ const Dashboard = () => {
   });
 
   const [cardData, setCardData] = useState([
-    { name: "Нийт ашиг", value: "$ 58397583753" },
-    { name: "Нийт ашиг", value: "$ 58397583753" },
-    { name: "Нийт ашиг", value: "$ 58397583753" },
-    { name: "Нийт ашиг", value: "$ 58397583753" },
+    {
+      name: "Нийт ашиг",
+      value: "$ 58397583753",
+      data:"+1232"
+    },
+    { name: "Нийт Гүйлгээ", value: "$ 58397583753" },
+    { name: "Нийт Хэрэглэгчид", value: "$ 58397583753" },
+    { name: "Нийт Машин", value: "$ 58397583753" },
   ]);
 
   return (
     <Layout>
-      <div className="w-full h-screen p-[20px] px-[40px]">
+      <div className="w-full max-w-[1440px] h-screen p-[20px] px-[40px]  ">
         <div className="w-full px-[10px] flex flex-col gap-[20px]">
           <div className="title">
-            <p className="text-black text-[26px] mt-[5px] font-medium">
+            <p className="text-black text-[26px] mt-[5px]  font-medium">
               Өнөөдрийн статистик
             </p>
             <p className="text-black text-[20px] mt-[5px] font-medium">

@@ -3,11 +3,11 @@ import { Link } from "react-router";
 
 const Buttons = () => {
   return (
-    <div className="flex flex-col w-fit mt-[100px] gap-[10px] px-[20px] ">
+    <div className="flex flex-col w-fit mt-[100px] gap-[15px] px-[20px] ">
       <Link to="/dashboard">
         <div className="flex flex-row gap-[10px] align-center">
           <svg
-            className="w-[26px] h-[26px] mt-[2px]"
+            className="w-[26px] h-[30px] mt-[2px]"
             viewBox="0 -0.5 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@ const Buttons = () => {
                 stroke-linejoin="round"></path>{" "}
             </g>
           </svg>
-          <button className="text-white text-[18px] font-medium text-start">
+          <button className="text-white text-[22px] font-medium text-start">
             Dashboard
           </button>
         </div>
@@ -63,7 +63,7 @@ const Buttons = () => {
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[26px] h-[22px] mt-[3px]">
+            className="w-[26px] h-[26px] mt-[3px]">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
@@ -81,51 +81,8 @@ const Buttons = () => {
                 fill="#ffffff"></path>{" "}
             </g>
           </svg>
-          <button className="text-white text-[18px] font-medium text-start">
-            Add Cars
-          </button>
-        </div>
-      </Link>
-      <Link to="/order">
-        <div className="flex flex-row gap-[10px] align-center">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-[26px] h-[22px] mt-[3px]">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              {" "}
-              <rect
-                x="3"
-                y="6"
-                width="18"
-                height="13"
-                rx="2"
-                stroke="#ffffff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"></rect>{" "}
-              <path
-                d="M3 10H20.5"
-                stroke="#ffffff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>{" "}
-              <path
-                d="M7 15H9"
-                stroke="#ffffff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>{" "}
-            </g>
-          </svg>
-          <button className="text-white text-[18px] font-medium text-start">
-            Orders
+          <button className="text-white text-[22px] font-medium text-start">
+            Cars
           </button>
         </div>
       </Link>
@@ -135,7 +92,7 @@ const Buttons = () => {
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[26px] h-[22px] mt-[2px]">
+            className="w-[26px] h-[26px] mt-[2px]">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
@@ -151,7 +108,7 @@ const Buttons = () => {
                 stroke-linejoin="round"></path>{" "}
             </g>
           </svg>
-          <button className="text-white text-[18px] font-medium text-start">
+          <button className="text-white text-[22px] font-medium text-start">
             Customers
           </button>
         </div>

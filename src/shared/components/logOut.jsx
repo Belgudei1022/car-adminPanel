@@ -1,15 +1,23 @@
 import React from "react";
 import { Link } from "react-router";
+import { logout } from "../../redux/authSlice";
+import { useDispatch } from "react-redux";
 
 const LogOut = () => {
+  const dispatch = useDispatch();
+  const handleLogOut = () => {
+    dispatch(logout);
+  };
   return (
-    <Link to="/" >
-      <div className="px-[20px] mb-[60px] flex flex-row align-center gap-[10px]">
+    <Link to="/">
+      <div
+        className="px-[20px] mb-[60px] flex flex-row align-center gap-[10px]"
+        onClick={handleLogOut}>
         <svg
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[26px] h-[26px] ">
+          className="w-[26px] h-[30px] ">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g
             id="SVGRepo_tracerCarrier"
@@ -24,7 +32,7 @@ const LogOut = () => {
               fill="#ffffff"></path>{" "}
           </g>
         </svg>
-        <button className="text-white text-[18px] font-medium text-start">
+        <button className="text-white text-[22px] font-medium text-start">
           Sign Out
         </button>
       </div>

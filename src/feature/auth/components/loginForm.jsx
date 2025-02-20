@@ -17,8 +17,8 @@ const LoginForm = () => {
         password,
       });
       console.log(user);
-      // localStorage.setItem("token", user.data.token);
-      // dispatch(login(user.data));
+      localStorage.setItem("token", user.data.token);
+      dispatch(login(user.data));
     } catch (error) {
       console.error("Login failed:", error);
     }
@@ -34,23 +34,21 @@ const LoginForm = () => {
           <input
             type="text"
             placeholder="Имэйл"
-            className="border border-black w-72 h-9 rounded-xl px-2"
+            className="border-b border-b-black w-72 h-10 px-2"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
             placeholder="Нууц үг"
-            className="border border-black w-72 h-9 rounded-xl px-2"
+            className="border-b border-b-black w-72 h-10 px-2"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <button
           type="submit"
-          className="w-72 h-12 bg-[#222222] text-white rounded-xl"
-         
-          >
+          className="w-72 h-12 bg-gradient-to-b from-[#000000] to-[#08072D] text-white rounded-xl">
           Нэвтрэх
         </button>
       </form>
