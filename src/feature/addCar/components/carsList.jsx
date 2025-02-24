@@ -3,8 +3,7 @@ import CarItem from "./carItem";
 
 const CarsList = () => {
   const cars = useSelector((state) => {
-    console.log("Redux state:", state);
-    return state.car.cars;
+    return state.car.cars.car;
   });
 
   return (

@@ -2,7 +2,9 @@ import React from "react";
 import CustomerItem from "./customerItem";
 import { useSelector } from "react-redux";
 const CustomerList = () => {
-  const users = useSelector((state) => state.user.users);
+  const users = useSelector((state) => {
+    return state.user.users.user;
+  });
 
   return (
     <div className="w-full h-[700px] bg-white drop-shadow-xl rounded-2xl p-[20px] flex flex-col gap-[5px] mt-[50px]">
@@ -22,9 +24,7 @@ const CustomerList = () => {
         <p className="font-medium w-[120px] h-[30px] text-center flex align-center justify-center">
           Цахим хаяг
         </p>
-        <p className="font-medium w-[120px] h-[30px] text-center flex align-center justify-center">
-          Нууц үг
-        </p>
+
         <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
           Утасны дугаар
         </p>
