@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../../shared/pages/layout";
-import Card from "../components/Card";
-import RentedCars from "../components/RentedCars";
+import Card from "../components/card";
+import RentedCars from "../components/rentedCars";
 import Graphic from "../components/Graphic";
 
 const Dashboard = () => {

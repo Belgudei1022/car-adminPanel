@@ -12,7 +12,7 @@ const CustomerList = () => {
       </h1>
       
       {/* Table Headers - Hidden on mobile */}
-      <div className="hidden md:grid grid-cols-8 gap-4 border-b pb-2 text-sm font-medium text-gray-600">
+      <div className="hidden md:grid grid-cols-8 gap-4 border-b border-stone-200 pb-2 text-sm font-medium text-gray-600">
         <p>ID</p>
         <p>Last Name</p>
         <p>First Name</p>

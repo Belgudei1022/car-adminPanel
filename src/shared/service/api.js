@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setCars } from "../../redux/carSlice";
 import { setUsers } from "../../redux/userSlice";
+import { setRent } from "../../redux/rentSlice";
 
 const FetchData = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const FetchData = () => {
       setLoading(false);
     }
   };
+
   const getUserData = async () => {
     try {
       setLoading(true);
@@ -34,12 +36,38 @@ const FetchData = () => {
     }
   };
 
+  const getRentData = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get(
+        "http://localhost:3000/rental/allRental"
+      );
+      // console.log(response);
+      dispatch(setRent(response.data));
+    } catch (error) {
+      console.error("Error fetching rental data:", error);
+      setError("Failed to fetch rentals");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    getCarData();
-    getUserData();
+    const fetchAllData = async () => {
+      try {
+        setLoading(true);
+        await Promise.all([getCarData(), getUserData(), getRentData()]);
+      } catch (err) {
+        setError("Failed to fetch data");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchAllData();
   }, []);
 
   // if (loading) return <div>Loading...</div>;
+  // if (error) return <div>Error: {error}</div>;
   // return null;
 };
 
