@@ -1,44 +1,30 @@
 import React from "react";
-import CustomerItem from "./customerItem";
 import { useSelector } from "react-redux";
+import CustomerItem from "./CustomerItem";
+
 const CustomerList = () => {
-  const users = useSelector((state) => {
-    return state.user.users.user;
-  });
+  const users = useSelector((state) => state.user.users.user);
 
   return (
-    <div className="w-full h-[700px] bg-white drop-shadow-xl rounded-2xl p-[20px] flex flex-col gap-[5px] mt-[50px]">
-      <div className="w-full flex flex-row justify-between mb-[10px] pb-[20px] border-b-1 border-stone-200">
-        <h1 className="font-medium text-[20px] ">Бүртгэлтэй хэрэглэгчид</h1>
+    <div className="w-full bg-white rounded-xl shadow-lg p-4 sm:p-6 mt-6 overflow-x-auto">
+      <h1 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
+        Registered Users
+      </h1>
+      
+      {/* Table Headers - Hidden on mobile */}
+      <div className="hidden md:grid grid-cols-8 gap-4 border-b pb-2 text-sm font-medium text-gray-600">
+        <p>ID</p>
+        <p>Last Name</p>
+        <p>First Name</p>
+        <p>Email</p>
+        <p>Phone</p>
+        <p>Address</p>
+        <p>ID Image</p>
+        <p>License</p>
       </div>
-      <div className="flex flex-row justify-between">
-        <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-          Дугаар
-        </p>
-        <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-          Овог
-        </p>
-        <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-          Нэр
-        </p>
-        <p className="font-medium w-[120px] h-[30px] text-center flex align-center justify-center">
-          Цахим хаяг
-        </p>
 
-        <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-          Утасны дугаар
-        </p>
-        <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-          Хаяг
-        </p>
-        <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-          Ирэгний үнэмлэх
-        </p>
-        <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-          Машины үнэмлэх
-        </p>
-      </div>
-      <div className="flex flex-col gap-[5px]">
+      {/* Mobile: Card Layout | Desktop: Table Rows */}
+      <div className="space-y-4 md:space-y-0">
         {users.map((user) => (
           <CustomerItem key={user.id} user={user} />
         ))}

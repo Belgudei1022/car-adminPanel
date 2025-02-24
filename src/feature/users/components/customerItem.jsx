@@ -2,30 +2,30 @@ import React from "react";
 
 const CustomerItem = ({ user }) => {
   return (
-    <div className="flex flex-row justify-between">
-      <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        {user.userID}
+    <div className="md:grid md:grid-cols-8 gap-4 p-4 md:p-0 bg-white md:bg-transparent rounded-lg shadow-sm md:shadow-none hover:bg-gray-50 transition-colors">
+      <p className="md:text-sm text-gray-700 font-medium md:font-normal">
+        <span className="md:hidden font-semibold">ID: </span>{user.userID}
       </p>
-      <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        {user.lastName}
+      <p className="md:text-sm text-gray-700">
+        <span className="md:hidden font-semibold">Last: </span>{user.lastName}
       </p>
-      <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        {user.firstName}
+      <p className="md:text-sm text-gray-700">
+        <span className="md:hidden font-semibold">First: </span>{user.firstName}
       </p>
-      <p className="font-medium w-[120px] h-[30px] text-center flex align-center justify-center">
-        {user.email}
+      <p className="md:text-sm text-gray-700">
+        <span className="md:hidden font-semibold">Email: </span>{user.email}
       </p>
-      <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        {user.phone}
+      <p className="md:text-sm text-gray-700">
+        <span className="md:hidden font-semibold">Phone: </span>{user.phone}
       </p>
-      <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        {user.address}
+      <p className="md:text-sm text-gray-700">
+        <span className="md:hidden font-semibold">Address: </span>{user.address}
       </p>
-      <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        {user.identityImage}
+      <p className="md:text-sm text-gray-700">
+        <span className="md:hidden font-semibold">ID Img: </span>{user.identityImage}
       </p>
-      <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        {user.licenseImage}
+      <p className="md:text-sm text-gray-700">
+        <span className="md:hidden font-semibold">License: </span>{user.licenseImage}
       </p>
     </div>
   );

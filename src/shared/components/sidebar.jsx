@@ -1,24 +1,13 @@
-// import React from "react";
-// import Buttons from "./buttons";
-// import LogOut from "./logOut";
-// const Sidebar = () => {
-//   return (
-//     <div className="w-1/5 h-screen bg- fixed px-[20px] hidden flex-col justify-between lg:flex">
-//       <Buttons />
-//       <LogOut />
-//     </div>
-//   );
-// };
-// export default Sidebar;
-
 import React from "react";
-import Buttons from "./buttons";
-import LogOut from "./logOut";
+import Buttons from "./Buttons";
+import LogOut from "./LogOut";
 
 const Sidebar = () => {
   return (
-    <div className="w-[250px] h-screen px-[20px] hidden flex-col justify-between lg:flex bg-gradient-to-b from-[#000000] to-[#08072D]">
-      <Buttons />
+    <div className="w-full sm:w-64 h-screen px-4 py-6 bg-gradient-to-b from-gray-900 to-indigo-950 text-white shadow-lg flex flex-col justify-between fixed lg:sticky top-0 z-40">
+      <div>
+        <Buttons />
+      </div>
       <LogOut />
     </div>
   );

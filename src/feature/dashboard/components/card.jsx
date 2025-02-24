@@ -9,7 +9,7 @@ const Card = ({ data }) => {
       : "src/assets/arrow-small-down.png";
 
   return (
-    <div className="h-[200px] rounded-xl bg-white drop-shadow-xl w-[340px] flex flex-col p-[24px] gap-[10px]">
+    <div className="h-[200px] rounded-xl bg-white drop-shadow-xl w-auto flex flex-col p-[24px] gap-[10px]">
       <h2 className="text-[22px] font-medium text-stone-800">{data.name}</h2>
       <p className="text-[34px] font-semibold mt-[10px]">{data.value}</p>
       <p className="px-[5px] flex flex-row gap-[2px] items-center">
