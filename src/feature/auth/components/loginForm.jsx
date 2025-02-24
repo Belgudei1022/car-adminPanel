@@ -48,7 +48,7 @@ const LoginForm = () => {
         </div>
         <button
           type="submit"
-          className="w-72 h-12 bg-gradient-to-b from-[#000000] to-[#08072D] text-white rounded-xl">
+          className="logo w-72 h-12 bg-gradient-to-b from-[#000000] to-[#08072D] text-white rounded-xl">
           Нэвтрэх
         </button>
       </form>

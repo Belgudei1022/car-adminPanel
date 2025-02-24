@@ -1,34 +1,34 @@
 import React from "react";
 
-const CustomerItem = () => {
+const CustomerItem = ({ user }) => {
   return (
     <div className="flex flex-row justify-between">
       <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        Дугаар
+        {user.UserID}
       </p>
       <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        Овог
+        {user.firstName}
       </p>
       <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        Нэр
+        {user.lastName}
       </p>
       <p className="font-medium w-[120px] h-[30px] text-center flex align-center justify-center">
-        Цахим хаяг
+        {user.Email}
       </p>
       <p className="font-medium w-[120px] h-[30px] text-center flex align-center justify-center">
-        Нууц үг
+        {user.password}
       </p>
       <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        Утасны дугаар
+        {user.Phone}
       </p>
       <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        Хаяг
+        {user.address}
       </p>
       <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        Ирэгний үнэмлэх
+        {user.identityImage}
       </p>
       <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        Машины үнэмлэх
+        {user.licenseImage}
       </p>
     </div>
   );

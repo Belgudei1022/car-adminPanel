@@ -1,7 +1,9 @@
 import React from "react";
 import CustomerItem from "./customerItem";
-
+import { useSelector } from "react-redux";
 const CustomerList = () => {
+  const users = useSelector((state) => state.user.users);
+
   return (
     <div className="w-full h-[700px] bg-white drop-shadow-xl rounded-2xl p-[20px] flex flex-col gap-[5px] mt-[50px]">
       <div className="w-full flex flex-row justify-between mb-[10px] pb-[20px] border-b-1 border-stone-200">
@@ -37,7 +39,9 @@ const CustomerList = () => {
         </p>
       </div>
       <div className="flex flex-col gap-[5px]">
-        
+        {users.map((user) => (
+          <CustomerItem key={user.id} user={user} />
+        ))}
       </div>
     </div>
   );

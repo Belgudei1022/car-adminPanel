@@ -52,7 +52,7 @@ const Buttons = () => {
                 stroke-linejoin="round"></path>{" "}
             </g>
           </svg>
-          <button className="text-white text-[22px] font-medium text-start">
+          <button className="logo text-white text-[22px] font-medium text-start">
             Dashboard
           </button>
         </div>

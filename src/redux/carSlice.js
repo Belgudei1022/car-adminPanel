@@ -9,7 +9,7 @@ const carSlice = createSlice({
   initialState,
   reducers: {
     setCars: (state, action) => {
-      state.cars = action.payload; 
+      state.cars = action.payload || [];
     },
   },
 });

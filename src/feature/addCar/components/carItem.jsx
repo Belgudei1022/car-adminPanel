@@ -1,37 +1,34 @@
 import React from "react";
 
-const CarItem = () => {
+const CarItem = ({data}) => {
   return (
     <div className="flex flex-row justify-between">
       <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        Брэнд
+        {data.brandName}
       </p>
-      <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        Модел
-      </p>
-      <p className="font-medium w-[100px] h-[30px] text-center flex align-center justify-center">
-        Үнэ
-      </p>
-      <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        Өнгө
+      <p className="font-medium w-[200px] h-[30px] text-center flex align-center justify-center">
+        {data.modelName}
       </p>
       <p className="font-medium w-[100px] h-[30px] text-center flex align-center justify-center">
-        Араа
+        {data.price}
       </p>
       <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
-        Суудал
+        {data.color}
       </p>
       <p className="font-medium w-[100px] h-[30px] text-center flex align-center justify-center">
-        Хөдөлгүүр
+        {data.engine}
+      </p>
+      <p className="font-medium w-[80px] h-[30px] text-center flex align-center justify-center">
+        {data.seats}
+      </p>
+      <p className="font-medium w-[100px] h-[30px] text-center flex align-center justify-center">
+        {data.type}
       </p>
       <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        Замын Хязгаар
+        {data.roadLimit}
       </p>
       <p className="font-medium w-[150px] h-[30px] text-center flex align-center justify-center">
-        Түлшний багтаамж
-      </p>
-      <p className="font-medium w-[100px] h-[30px] text-center flex align-center justify-center">
-        Байгаа эсэх
+        {data.fuelCapacity}
       </p>
     </div>
   );
